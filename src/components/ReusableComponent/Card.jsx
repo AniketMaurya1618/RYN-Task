@@ -32,7 +32,7 @@ function Card({ data }) {
             <div
                 className={
                     vertical
-                        ? 'overflow-hidden rounded-xl w-[140px] h-[140px] min-w-[140px]'
+                        ? 'overflow-hidden rounded-xl w-[140px] h-[140px] min-w-[140px] sm:h-40 '
                         : 'w-full md:w-1/2'
                 }
             >
@@ -46,7 +46,7 @@ function Card({ data }) {
             <div
                 className={
                     vertical
-                        ? 'flex flex-col flex-1 px-6'
+                        ? 'flex flex-col flex-1 px-6 sm:jstify-between sm:items-center py-6 '
                         : 'w-full md:w-1/2 flex flex-col gap-4'
                 }
             >
@@ -65,12 +65,12 @@ function Card({ data }) {
 
                 {link && (
                     <div
-                        className={`relative ${vertical ? 'mt-4' : 'py-25 '}`}
+                        className={`md:relative  lg:relative sm:relative : ${vertical ? 'mt-6  ' : 'py-25   '}`}
                     >
                         <a href={link}>
                             <Button
                                 text={finalLabel}
-                                className={`bg-white text-black py-2 ${vertical ? 'absolute -right-10 -top-20' : ''}`}
+                                className={`bg-white text-black py-2 ${vertical ? 'absolute -right-10 -top-20 sm:absolute sm:-top-5 sm:right-0 ' : ''}`}
                             />
                         </a>
                     </div>
